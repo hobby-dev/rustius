@@ -2,11 +2,6 @@
 //! 
 //! This is test project for a private company
 //! 
-//! # Usage
-//! 
-//! ```
-//! rustius inputstring 
-//! ```
 #![deny(
     unused_imports,
     anonymous_parameters,
