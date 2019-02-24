@@ -4,8 +4,8 @@ extern crate test;
 
 #[cfg(test)]
 mod tests {
-    use test::{Bencher};
     use rustius::search_longest_2char_substr;
+    use test::Bencher;
 
     #[bench]
     fn bench1(b: &mut Bencher) {

@@ -1,7 +1,7 @@
 //! # rustius
-//! 
+//!
 //! This is test project for a private company
-//! 
+//!
 #![deny(
     unused_imports,
     anonymous_parameters,
@@ -24,6 +24,9 @@ fn main() {
     println!("Enter string:");
     let stdin = io::stdin();
     for line in stdin.lock().lines() {
-        println!("Longest substring of two characters:\n{}\nEnter string:", search_longest_2char_substr(&line.unwrap()));
+        println!(
+            "Longest substring of two characters:\n{}\nEnter string:",
+            search_longest_2char_substr(&line.unwrap())
+        );
     }
 }

@@ -26,10 +26,12 @@ pub fn search_longest_2char_substr(input: &str) -> &str {
     let mut current_seq_begin = 0;
     let mut current_bbb_begin = 0;
     for (position, c) in input.char_indices() {
-        if c == b { // b repeats
+        if c == b {
+            // b repeats
             continue;
         }
-        if c == a { // a and b swaps
+        if c == a {
+            // a and b swaps
             use std::mem;
             mem::swap(&mut a, &mut b);
             current_bbb_begin = position;
@@ -37,8 +39,7 @@ pub fn search_longest_2char_substr(input: &str) -> &str {
         }
         // Current a-b sequence ends here!
         // Is it longest sequence so far?
-        if position - current_seq_begin > longest_sequence_end - longest_sequence_begin
-        {
+        if position - current_seq_begin > longest_sequence_end - longest_sequence_begin {
             // Yes, it is
             longest_sequence_begin = current_seq_begin;
             longest_sequence_end = position;
@@ -50,8 +51,7 @@ pub fn search_longest_2char_substr(input: &str) -> &str {
     }
     // Check if last sequence was the longest
     let position = input.len();
-    if position - current_seq_begin > longest_sequence_end - longest_sequence_begin
-    {
+    if position - current_seq_begin > longest_sequence_end - longest_sequence_begin {
         longest_sequence_begin = current_seq_begin;
         longest_sequence_end = position;
     }

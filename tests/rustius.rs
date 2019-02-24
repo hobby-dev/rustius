@@ -17,7 +17,10 @@ fn test2() {
 
 #[test]
 fn test3() {
-    assert_eq!(search_longest_2char_substr("aaaaabbbcaaaaabbbb"), "aaaaabbbb");
+    assert_eq!(
+        search_longest_2char_substr("aaaaabbbcaaaaabbbb"),
+        "aaaaabbbb"
+    );
 }
 
 #[test]
@@ -32,14 +35,19 @@ fn test5() {
 
 #[test]
 fn test6() {
-    assert_eq!(search_longest_2char_substr("трололололололотроло"), "ололололололо");
+    assert_eq!(
+        search_longest_2char_substr("трололололололотроло"),
+        "ололололололо"
+    );
 }
 
 #[test]
 fn test7() {
-    assert_eq!(search_longest_2char_substr("trolololollolotrolo"), "olololollolo");
+    assert_eq!(
+        search_longest_2char_substr("trolololollolotrolo"),
+        "olololollolo"
+    );
 }
-
 
 #[test]
 fn test8() {
@@ -68,7 +76,10 @@ fn test12() {
 
 #[test]
 fn test13() {
-    assert_eq!(search_longest_2char_substr("caaaaaaaaaaaaaaabbbbbbbbbb"), "aaaaaaaaaaaaaaabbbbbbbbbb");
+    assert_eq!(
+        search_longest_2char_substr("caaaaaaaaaaaaaaabbbbbbbbbb"),
+        "aaaaaaaaaaaaaaabbbbbbbbbb"
+    );
 }
 
 #[test]
