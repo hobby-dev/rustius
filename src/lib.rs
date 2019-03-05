@@ -57,3 +57,31 @@ pub fn search_longest_2char_substr(input: &str) -> &str {
     }
     &input[longest_sequence_begin..longest_sequence_end]
 }
+
+/// Input contains pairs of values, in no particular order.
+/// One value has 0 instead of matching value.
+/// Returns a value that has no matching pair.
+pub fn search_missing_pair(input: &mut Vec<i32>) -> i32 {
+    let mut index = 0;
+    let len = input.len();
+
+    while index < len {
+        let current_element = *input.get(index).unwrap();
+        if current_element != 0 {
+            // ignore all 0
+            let mut found = false;
+            for item in input.iter_mut().skip(index + 1) {
+                if *item == current_element {
+                    *item = 0; // will be ignored
+                    found = true;
+                    break;
+                }
+            }
+            if !found {
+                return current_element;
+            }
+        }
+        index += 1;
+    }
+    0
+}
